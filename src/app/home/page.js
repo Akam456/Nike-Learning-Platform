@@ -1,6 +1,7 @@
 import Link from "next/link";
 import CustomCard from './components/customcard';
 import NoTickerCard from "./components/notickercard";
+import Sidebar from "../components/SideBar";
 
 export default function Home() {
   // Data for the first grid with ticker
@@ -30,61 +31,64 @@ export default function Home() {
   ];
 
   return (
-    <div className="min-h-screen bg-cover bg-center bg-no-repeat text-black py-8" style={{ backgroundImage: "url('/images/bg.png')" }}>
+    <div className="flex min-h-screen bg-cover bg-center bg-no-repeat text-black">
+      <Sidebar /> 
       {/* Main Container */}
-      <div className="max-w-screen-xl mx-auto p-6">
-        
-        {/* First Section - Continue where you left off */}
-        <h1 className="text-3xl font-bold mb-6">Continue where you left off</h1>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-          {continueWhereLeftOff.map((item, index) => (
-            <CustomCard
-              key={index}
-              topTitle={item.topTitle}
-              title={item.title}
-              backgroundImage={item.backgroundImage}
-              rating={item.rating}
-              tickerProgress={item.tickerProgress}
-            />
-          ))}
-        </div>
-
-        {/* Second Section - Digital Literacy Skills (Slider) */}
-        <h2 className="text-3xl font-bold my-6 pt-12">Digital Literacy Skills</h2>
-        <div className="slider-container">
-          <div className="slider-content">
-            {digitalLiteracySkills.map((item, index) => (
-              <NoTickerCard
+      <div className="min-h-screen flex-grow bg-cover bg-center bg-no-repeat text-black py-8" style={{ backgroundImage: "url('/images/bg.png')" }}>
+        <div className="max-w-screen-xl mx-auto p-6">
+          
+          {/* First Section - Continue where you left off */}
+          <h1 className="text-3xl font-bold mb-6">Continue where you left off</h1>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            {continueWhereLeftOff.map((item, index) => (
+              <CustomCard
                 key={index}
+                topTitle={item.topTitle}
                 title={item.title}
                 backgroundImage={item.backgroundImage}
                 rating={item.rating}
+                tickerProgress={item.tickerProgress}
               />
             ))}
           </div>
-        </div>
 
-        {/* Third Section - Business Acumen: Influence (Slider) */}
-        <h2 className="text-3xl font-bold my-6">Because you started Business Acumen: Influence</h2>
-        <div className="slider-container">
-          <div className="slider-content">
-            {businessAcumenInfluence.map((item, index) => (
-              <NoTickerCard
-                key={index}
-                title={item.title}
-                backgroundImage={item.backgroundImage}
-                rating={item.rating}
-              />
-            ))}
+          {/* Second Section - Digital Literacy Skills (Slider) */}
+          <h2 className="text-3xl font-bold my-6 pt-12">Digital Literacy Skills</h2>
+          <div className="slider-container">
+            <div className="slider-content">
+              {digitalLiteracySkills.map((item, index) => (
+                <NoTickerCard
+                  key={index}
+                  title={item.title}
+                  backgroundImage={item.backgroundImage}
+                  rating={item.rating}
+                />
+              ))}
+            </div>
           </div>
-        </div>
 
-        {/* Footer */}
-        <footer className="flex justify-center mt-8">
-          <Link href="/skills">
-            {/* Link contents */}
-          </Link>
-        </footer>
+          {/* Third Section - Business Acumen: Influence (Slider) */}
+          <h2 className="text-3xl font-bold my-6">Because you started Business Acumen: Influence</h2>
+          <div className="slider-container">
+            <div className="slider-content">
+              {businessAcumenInfluence.map((item, index) => (
+                <NoTickerCard
+                  key={index}
+                  title={item.title}
+                  backgroundImage={item.backgroundImage}
+                  rating={item.rating}
+                />
+              ))}
+            </div>
+          </div>
+
+          {/* Footer */}
+          <footer className="flex justify-center mt-8">
+            <Link href="/skills">
+              {/* Link contents */}
+            </Link>
+          </footer>
+        </div>
       </div>
     </div>
   );
