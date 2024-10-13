@@ -3,6 +3,11 @@ import Link from 'next/link';
 import SkillCard from './components/SkillCard';
 import GradientButton from './components/GradientButton';
 import WhiteBox from './components/WhiteBox';
+import SkillScroll from './components/SkillScroll';
+import CategoryScroll from './components/CategoryScroll';
+import YourSkillsSection from './components/YourSkillsSection';
+import SkillExchangeHistorySection from './components/SkillExchangeHistory';
+
 import SideBar from '../components/SideBar';
 
 const IconPlaceholder = ({ children }) => (
@@ -10,13 +15,27 @@ const IconPlaceholder = ({ children }) => (
 );
 
 export default function SkillExchangePage() {
+  const profileData = [
+    { name: 'Anna', skill: 'Predicting Trends Using SQL' },
+    { name: 'Ben', skill: 'Data Visualizations in Excel' },
+    { name: 'Amelia', skill: 'Large Language Models' },
+    { name: 'Olivia', skill: 'Simulating External Events' },
+    { name: 'James', skill: 'Collecting Large Datasets' },
+  ];
+  
   const skillCategories = [
     "Data Analysis",
     "Management",
     "Operations",
     "Strategy",
-    "Business Acumen"
+    "Business Acumen",
   ];
+  const skillExchangeHistory = [
+    { name: 'Katie', skill: 'Tableau Visualizations', image: '/api/placeholder/40/40' },
+    { name: 'Toby', skill: 'Financial Statements', image: '/api/placeholder/40/40' },
+    { name: 'John', skill: 'Pivot Tables', image: '/api/placeholder/40/40' },
+  ];
+
 
   return (
 
@@ -41,56 +60,30 @@ export default function SkillExchangePage() {
           </div>
         </header>
 
-        <main className="flex flex-col md:flex-row flex-grow">
-          <div className="w-full md:w-1/2 pr-4">
-            <h2 className="text-4xl font-bold mb-6">Find a skill</h2>
-            <div className="relative mb-8">
-              <input
-                type="text"
-                placeholder="Search Employee Skills"
-                className="w-full p-3 pr-10 rounded-md bg-gray-100 border border-gray-300"
-              />
-              <IconPlaceholder className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400">
-                🔍
-              </IconPlaceholder>
-            </div>
+      <main className="flex flex-col md:flex-row flex-grow">
+        <div className="w-full md:w-1/2 pr-4">
+          <h2 className="text-4xl font-bold mb-6">Find a skill</h2>
+          <div className="relative mb-8">
+            <input
+              type="text"
+              placeholder="Search Employee Skills"
+              className="w-full p-3 pr-10 rounded-md bg-gray-100 border border-gray-300"
+            />
           </div>
+        </div>
 
-          <div className="w-full md:w-1/2 pl-4">
-            <div className="flex justify-between items-center mb-4">
-              <h3 className="text-xl font-semibold">Skill Exchange History</h3>
-              <a href="#" className="text-red-500 hover:underline">View All</a>
-            </div>
-            {/* This section is intentionally left blank */}
-          </div>
-        </main>
+        <div className="w-full md:w-1/2 pl-4">
+          <YourSkillsSection />
+          <SkillExchangeHistorySection history={skillExchangeHistory} />
+        </div>
+      </main>
 
-        <WhiteBox>
-          <section className="mt-8">
-            <h3 className="text-xl font-semibold mb-4">Explore Popular Skills</h3>
-            <div className="flex flex-wrap gap-2 mb-4">
-              {skillCategories.map((category, index) => (
-                <GradientButton key={index} label={category} />
-              ))}
-            </div>
+      <WhiteBox>
+        <h3 className="text-xl font-semibold mb-4">Explore Popular Skills</h3>
+        <CategoryScroll skillCategories={skillCategories} />
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
-              {[
-                { name: 'Anna', skill: 'Predicting Trends Using SQL' },
-                { name: 'Ben', skill: 'Data Visualizations in Excel' },
-                { name: 'Amelia', skill: 'Large Language Models' },
-                { name: 'Olivia', skill: 'Simulating External Events' },
-                { name: 'James', skill: 'Collecting Large Datasets' },
-              ].map((item, index) => (
-                <SkillCard key={index} name={item.name} skill={item.skill} />
-              ))}
-            </div>
-            <div className="flex justify-end mt-4">
-              <button className="p-2"><IconPlaceholder>←</IconPlaceholder></button>
-              <button className="p-2"><IconPlaceholder>→</IconPlaceholder></button>
-            </div>
-          </section>
-        </WhiteBox>
+        <SkillScroll skills={profileData} />
+      </WhiteBox>
 
         {/* Temporary Navigation Before Side Bar */}
         <footer className="mt-8 py-4 border-t border-gray-200 flex justify-center">

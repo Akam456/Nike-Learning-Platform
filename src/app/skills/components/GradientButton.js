@@ -18,7 +18,7 @@ const GradientButton = ({ label }) => {
         isActive
           ? 'bg-gradient-to-r from-yellow-400 to-orange-500 text-white'
           : 'bg-transparent text-gray-500'
-      } font-semibold px-6 py-2 rounded-md shadow-md transition-colors duration-300`}
+      } font-semibold w-40 h-12 rounded-md shadow-md transition-colors duration-300`}
     >
       {label}
     </button>

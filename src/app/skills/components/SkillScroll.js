@@ -1,0 +1,49 @@
+'use client';
+import React, { useRef } from 'react';
+import SkillCard from './SkillCard';
+import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
+
+
+
+const ProfileScroll = ({ skills }) => {
+  const containerRef = useRef(null);
+
+  // Function to scroll the grid left and right
+  const scrollLeft = () => {
+    if (containerRef.current) {
+      containerRef.current.scrollBy({ left: -300, behavior: 'smooth' });
+    }
+  };
+
+  const scrollRight = () => {
+    if (containerRef.current) {
+      containerRef.current.scrollBy({ left: 300, behavior: 'smooth' });
+    }
+  };
+
+  return (
+    <div>
+      {/* Grid with horizontal scrolling */}
+      <div
+        ref={containerRef}
+        className="grid grid-flow-col auto-cols-max gap-6 h-full overflow-x-auto"
+      >
+        {skills.map((item, index) => (
+          <SkillCard key={index} name={item.name} skill={item.skill} />
+        ))}
+      </div>
+
+      {/* Buttons to scroll */}
+      <div className="flex justify-end mt-4">
+        <button className="p-2" onClick={scrollLeft}>
+          <FaArrowLeft />
+        </button>
+        <button className="p-2" onClick={scrollRight}>
+          <FaArrowRight />
+        </button>
+      </div>
+    </div>
+  );
+};
+
+export default ProfileScroll;
