@@ -12,14 +12,13 @@ import SideBar from '../components/SideBar';
 const IconPlaceholder = ({ children }) => (
   <span className="inline-block w-6 h-6 text-center">{children}</span>
 );
-
 export default function SkillExchangePage() {
   const profileData = [
-    { name: 'Anna', skill: 'Predicting Trends Using SQL', profilePicture: "images/Anna_profile.png", backgroundImage: '/images/sql_background.png'},
-    { name: 'Ben', skill: 'Data Visualizations in Excel', profilePicture: "images/Ben_profile.png", backgroundImage: '/images/excel_background.png'},
-    { name: 'Amelia', skill: 'Large Language Models', profilePicture: "images/Amelia_profile.png", backgroundImage: '/images/wires_background.png'},
-    { name: 'Olivia', skill: 'Simulating External Events', profilePicture: "images/Olivia_profile.png", backgroundImage: '/images/nike_background.png'},
-    { name: 'James', skill: 'Collecting Large Datasets', profilePicture: "images/James_profile.png", backgroundImage: '/images/shoes_background.png'},
+    { name: 'Anna', skill: 'Predicting Trends Using SQL', profilePicture: "skills_images/Anna_profile.png", backgroundImage: 'skills_images/sql_background.png'},
+    { name: 'Ben', skill: 'Data Visualizations in Excel', profilePicture: "skills_images/Ben_profile.png", backgroundImage: 'skills_images/excel_background.png'},
+    { name: 'Amelia', skill: 'Large Language Models', profilePicture: "skills_images/Amelia_profile.png", backgroundImage: 'skills_images/wires_background.png'},
+    { name: 'Olivia', skill: 'Simulating External Events', profilePicture: "skills_images/Olivia_profile.png", backgroundImage: 'skills_images/nike_background.png'},
+    { name: 'James', skill: 'Collecting Large Datasets', profilePicture: "skills_images/James_profile.png", backgroundImage: 'skills_images/shoes_background.png'},
   ];
   
   const skillCategories = [
