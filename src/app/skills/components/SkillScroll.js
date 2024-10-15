@@ -22,14 +22,14 @@ const ProfileScroll = ({ skills }) => {
   };
 
   return (
-    <div>
+    <div className="p-0 mx-4 mt-8">
       {/* Grid with horizontal scrolling */}
       <div
         ref={containerRef}
         className="grid grid-flow-col auto-cols-max gap-6 h-full overflow-x-auto"
       >
         {skills.map((item, index) => (
-          <SkillCard key={index} name={item.name} skill={item.skill} />
+          <SkillCard key={index} name={item.name} skill={item.skill} profilePicture={item.profilePicture} backgroundImage={item.backgroundImage}/>
         ))}
       </div>
 

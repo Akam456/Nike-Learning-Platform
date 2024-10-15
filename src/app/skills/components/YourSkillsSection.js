@@ -3,14 +3,10 @@
 import React from 'react';
 import Link from 'next/link';
 
-const IconPlaceholder = ({ children, className }) => (
-  <span className={`inline-flex items-center justify-center w-4 h-full ${className}`}>{children}</span>
-);
-
-const SkillItem = ({ skill, isLast }) => (
-  <div className={`flex items-center justify-between flex-1 px-4 ${!isLast ? 'border-r border-gray-300' : ''}`}>
-    <span className="text-sm font-medium text-center flex-grow">{skill}</span>
-    <IconPlaceholder className="text-gray-400 ml-2">›</IconPlaceholder>
+const SkillItem = ({ skill }) => (
+  <div className="flex-1 flex items-center px-8">
+    <span className="text-base font-bold font-helvetica-neue">{skill}</span>
+    <span className="text-orange-500 text-2xl font-bold ml-2 self start -mt-0.5">›</span>
   </div>
 );
 
@@ -23,19 +19,21 @@ export default function YourSkillsSection() {
 
   return (
     <div className="mb-6">
-      <div className="flex justify-between items-center mb-2">
+      <div className="flex justify-between items-center mb-4">
         <div className="flex items-center">
-          <svg className="w-6 h-6 mr-2 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+          <svg className="w-6 h-6 mr-2 text-black-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="12" r="11" strokeWidth="2" />
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 13a3 3 0 100-6 3 3 0 000 6z" />
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 17.5c-1.4-1.4-3.3-2.3-5.4-2.3-2.1 0-4 .9-5.4 2.3" />
           </svg>
-          <h3 className="text-xl font-semibold">Your Skills</h3>
+          <h3 className="text-xl font-bold font-helvetica-neue">Your Skills</h3>
         </div>
-        <Link href="/manage-skills" className="text-sm text-red-500 hover:underline">Manage Skills ›</Link>
+        <Link href="/manage-skills" className="text-sm text-red-500 hover:underline font-bold font-helvetica-neue">Manage Skills ›</Link>
       </div>
-      <div className="bg-gray-50 border border-gray-100">
-        <div className="flex items-stretch h-12">
+      <div className="bg-white border border-gray-200 rounded-lg shadow-sm">
+        <div className="flex items-stretch h-20">
           {skills.map((skill, index) => (
-            <SkillItem key={index} skill={skill} isLast={index === skills.length - 1} />
+            <SkillItem key={index} skill={skill} />
           ))}
         </div>
       </div>

@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import GradientButton from './GradientButton'; // Import your GradientButton component
 
 const CategoryScroll = ({ skillCategories }) => {
@@ -19,26 +19,21 @@ const CategoryScroll = ({ skillCategories }) => {
     }
   };
 
+  const [selectedCategory, setSelectedCategory] = useState(null);
+
   return (
-    <div>
+    <div className="p-0 mx-5 mt-8">
       {/* Grid with horizontal scrolling */}
       <div
         ref={containerRef}
         className="grid grid-flow-col auto-cols-max gap-6 h-full overflow-x-auto"
       >
         {skillCategories.map((category, index) => (
-          <GradientButton key={index} label={category} />
+          <GradientButton 
+          key={index} label={category} 
+          isActive={selectedCategory === category} 
+          onClick={() => setSelectedCategory(category)} />
         ))}
-      </div>
-
-      {/* Buttons to scroll */}
-      <div className="flex justify-end mt-4">
-        <button className="p-2" onClick={scrollLeft}>
-          ←
-        </button>
-        <button className="p-2" onClick={scrollRight}>
-          →
-        </button>
       </div>
     </div>
   );

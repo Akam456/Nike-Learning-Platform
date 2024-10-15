@@ -2,42 +2,57 @@
 
 import React, { useState } from 'react';
 
-const SkillCard = ({ name, skill }) => {
-  // State to toggle border
+const SkillCard = ({ name, skill, profilePicture, backgroundImage }) => {
+  // State to toggle border around the card
   const [hasOrangeBorder, setHasOrangeBorder] = useState(false);
 
-  // Function to toggle the border
+  // Function to toggle the border around the card
   const toggleBorder = () => {
-    setHasOrangeBorder(!hasOrangeBorder);
+    setHasOrangeBorder(!hasOrangeBorder);  // Toggle the state of the border
   };
 
   return (
     <div
-      // Make the entire card clickable
       onClick={toggleBorder}
-      className={`w-64 h-60 rounded-xl overflow-hidden shadow-lg p-4 bg-white cursor-pointer border-4 ${
-        hasOrangeBorder ? 'border-orange-500' : 'border-gray-300'
-      }`}
+      className={`p-[0.2rem] rounded-md ${hasOrangeBorder ? 'border-2 border-orange-500' : 'border-2 border-transparent'}`}
     >
-      {/* Profile Section */}
-      <div className="flex items-center mb-4">
-        <div className="w-12 h-12 bg-gray-300 rounded-full flex items-center justify-center">
-          <span className="text-xl font-bold text-gray-600">
-            {name.charAt(0)}
-          </span>
+      <div className="relative w-[13.75rem] h-[12.95rem] rounded-md overflow-hidden cursor-pointer">
+        {/* Blurred background image */}
+        <div
+          className="absolute inset-0 z-0"
+          style={{
+            backgroundImage: `url(${backgroundImage})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            filter: 'blur(2px)',
+            transform: 'scale(1.05)',
+          }}
+        />
+        {/* Semi-transparent overlay for darkening */}
+        <div className="absolute inset-0 bg-black opacity-20" />
+        {/* Profile Section */}
+        <div className="relative flex items-center p-[0.2rem] mt-2">
+          <div className="w-[3rem] h-[3rem] bg-gray-300 rounded-full flex items-center justify-center ml-4"> {/* Profile Picture */}
+            <img
+              src={profilePicture}
+              alt={`${name}'s profile`}
+              className="w-full h-full object-cover rounded-full"  // Profile image styling
+            />
+          </div>
+          <div className="ml-4 text-white mt-2">
+            <p className="text-[1rem] font-helvetica-neue mb-0 leading-none">{name}</p>
+            {/* Follow Button */}
+            <button className="mt-[0rem] bg-gradient-to-r from-orange-400 to-pink-500 text-white px-1 py-0 rounded-sm text-[0.5rem] font-bold font-helvetica-neue">
+              + Follow
+            </button>
+          </div>
         </div>
-        <div className="ml-2">
-          <p className="font-bold text-lg">{name}</p>
-        </div>
-        <button className="ml-auto bg-orange-500 text-white px-3 py-1 rounded-full text-sm">
-          + Follow
-        </button>
-      </div>
 
-      {/* Skill Name Section */}
-      <div className="relative">
-        <div className="h-32 flex items-center justify-center">
-          <h2 className="text-gray-600 text-xl font-bold">{skill}</h2>
+        {/* Skill Name Section */}
+        <div className="absolute bottom-6 left-6 right-6">
+          <h2 className="text-white font-bold z-10 font-helvetica-neue text-[1.5rem] leading-[1.1]">
+            {skill}
+          </h2>
         </div>
       </div>
     </div>
