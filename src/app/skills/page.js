@@ -29,9 +29,9 @@ export default function SkillExchangePage() {
     "Business Acumen",
   ];
   const skillExchangeHistory = [
-    { name: 'Katie', skill: 'Tableau Visualizations', image: '/images/katie_photo.png' },
-    { name: 'Toby', skill: 'Financial Statements', image: '/images/toby_photo.png' },
-    { name: 'John', skill: 'Pivot Tables', image: '/images/john_photo.png' },
+    { name: 'Katie', skill: 'Tableau Visualizations', image: 'skills_images/katie_photo.png' },
+    { name: 'Toby', skill: 'Financial Statements', image: 'skills_images/toby_photo.png' },
+    { name: 'John', skill: 'Pivot Tables', image: 'skills_images/john_photo.png' },
   ];
 
 
