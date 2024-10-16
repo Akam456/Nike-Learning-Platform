@@ -6,6 +6,8 @@ import NoTickerCard from "./components/notickercard";
 import PopUp from "./components/popup";
 import React, { useState} from 'react';
 
+import SideBar from '../components/SideBar';
+
 export default function Home() {
   // Data for the first grid with ticker
   const continueWhereLeftOff = [
@@ -45,76 +47,81 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-white bg-cover bg-center bg-no-repeat text-black py-8" style={{ backgroundImage: "url('/images/bg.png')",
-    backgroundPosition: "top", // Adjust to show the middle part
-    backgroundSize: "cover" }}>
-      {/* Main Container */}
-     
-        
-        {/* First Section - Continue where you left off */}
-        <h1 className="text-[2.2rem] font-sans font-[690] pl-8 pb-3">Continue where you left off</h1>
-        <div className="pl-[2rem] flex flex-wrap justify-start">
-          {continueWhereLeftOff.map((item, index) => (
-            <CustomCard
-              key={index}
-              topTitle={item.topTitle}
-              title={item.title}
-              backgroundImage={item.backgroundImage}
-              rating={item.rating}
-              tickerProgress={item.tickerProgress}
-              onClick={() => openPopUp(item)}
-            />
-          ))}
-        </div>
-        
-
-        {/* Second Section - Digital Literacy Skills (Slider) */}
-        <h2 className="pl-[2rem] font-sans text-[1.8rem] font-[690] pt-11 pb-2">Digital Literacy Skills</h2>
-        <div className="pl-[2rem] slider-container">
-          <div className="slider-content py-1">
-            {digitalLiteracySkills.map((item, index) => (
-              <NoTickerCard
+    <div className="min-h-screen flex flex-grow">
+    <div>
+      <SideBar/>
+    </div>
+    <div className="flex-grow flex flex-col">
+      <div className="min-h-screen bg-white bg-cover bg-center bg-no-repeat text-black py-8 " style={{ backgroundImage: "url('/images/bg.png')",
+      backgroundPosition: "top", // Adjust to show the middle part
+      backgroundSize: "cover" }}>
+        {/* Main Container */}
+          {/* First Section - Continue where you left off */}
+          <h1 className="text-[2.2rem] font-sans font-[690] pl-8 pb-3">Continue where you left off</h1>
+          <div className="pl-[2rem] flex flex-wrap justify-start">
+            {continueWhereLeftOff.map((item, index) => (
+              <CustomCard
                 key={index}
+                topTitle={item.topTitle}
                 title={item.title}
                 backgroundImage={item.backgroundImage}
                 rating={item.rating}
+                tickerProgress={item.tickerProgress}
                 onClick={() => openPopUp(item)}
               />
             ))}
           </div>
-        </div>
+          
 
-        {/* Third Section - Business Acumen: Influence (Slider) */}
-        <h2 className="pl-[2rem] font-sans text-[1.8rem] font-[690] pb-2 pt-6">Because you started Business Acumen: Influence</h2>
-        <div className="pl-[2rem] slider-container">
-          <div className="slider-content py-1">
-            {businessAcumenInfluence.map((item, index) => (
-              <NoTickerCard
-                key={index}
-                title={item.title}
-                backgroundImage={item.backgroundImage}
-                rating={item.rating}
-                onClick={() => openPopUp(item)}
-              />
-            ))}
+          {/* Second Section - Digital Literacy Skills (Slider) */}
+          <h2 className="pl-[2rem] font-sans text-[1.8rem] font-[690] pt-11 pb-2">Digital Literacy Skills</h2>
+          <div className="pl-[2rem] slider-container">
+            <div className="slider-content py-1">
+              {digitalLiteracySkills.map((item, index) => (
+                <NoTickerCard
+                  key={index}
+                  title={item.title}
+                  backgroundImage={item.backgroundImage}
+                  rating={item.rating}
+                  onClick={() => openPopUp(item)}
+                />
+              ))}
+            </div>
           </div>
-        </div>
 
-        {/* Footer */}
-        <footer className="flex justify-center mt-8">
-          <Link href="/skills">
-            {/* Link contents */}
-          </Link>
-        </footer>
-        {/* Conditionally render the PopUp if a card is clicked */}
-       {selectedCard && (
-        <PopUp
-          topTitle={selectedCard.topTitle}
-          title={selectedCard.title}
-          rating={selectedCard.rating}
-          closePopUp={closePopUp}
-        />
-      )}
+          {/* Third Section - Business Acumen: Influence (Slider) */}
+          <h2 className="pl-[2rem] font-sans text-[1.8rem] font-[690] pb-2 pt-6">Because you started Business Acumen: Influence</h2>
+          <div className="pl-[2rem] slider-container">
+            <div className="slider-content py-1">
+              {businessAcumenInfluence.map((item, index) => (
+                <NoTickerCard
+                  key={index}
+                  title={item.title}
+                  backgroundImage={item.backgroundImage}
+                  rating={item.rating}
+                  onClick={() => openPopUp(item)}
+                />
+              ))}
+            </div>
+          </div>
+
+          {/* Footer */}
+          <footer className="flex justify-center mt-8">
+            <Link href="/skills">
+              {/* Link contents */}
+            </Link>
+          </footer>
+          {/* Conditionally render the PopUp if a card is clicked */}
+          {selectedCard && (
+          <PopUp
+            topTitle={selectedCard.topTitle}
+            title={selectedCard.title}
+            rating={selectedCard.rating}
+            closePopUp={closePopUp}
+          />
+        )}
+      </div>
+      </div>
     </div>
   );
 }

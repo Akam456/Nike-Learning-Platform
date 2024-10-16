@@ -112,11 +112,11 @@ export default function SkillExchangePage() {
     </main>
 
         {/* Temporary Navigation Before Side Bar */}
-        <footer className="mt-16 py-4 border-t border-gray-200 flex justify-center">
+        {/*<footer className="mt-16 py-4 border-t border-gray-200 flex justify-center">
           <Link href="/home" className="text-red-500 hover:underline hover:underline-offset-4">
             To Home / Course Page →
           </Link>
-        </footer>
+        </footer>*/}
       </div>
       {/* Temporary Navigation Before Side Bar */}
     </div>
