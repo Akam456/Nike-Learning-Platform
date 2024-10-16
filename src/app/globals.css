@@ -30,13 +30,12 @@ body {
   }
 }
 
-/* Slider container styles */
+/* Slider container styles (replaced with jasons) */ 
 .slider-container {
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
+  overflow-x: scroll;
+  overflow-y: visible;
+  scroll-snap-type: x;
   -webkit-overflow-scrolling: touch;
-  padding-bottom: 1rem;
-  -ms-overflow-style: none; /* IE 10+ */
   scrollbar-width: none; /* Firefox */
 }
 
@@ -46,33 +45,34 @@ body {
 
 /* Slider content styles */
 .slider-content {
-  display:flex
+  display:flex;
+  overflow:visible;
 }
 
-/* Slider item styles */
+/* Slider item styles (replaced with jasons)*/
 .slider-content > * {
-  flex: 0 0 auto;
-  scroll-snap-align: start;
-  width: calc(100% / 2 + 1px); /* Adjust to show 1.5 cards at a time, add 1px to prevent gaps */
-  min-width: 250px;
+  flex: 0 0;
+  scroll-snap-align: none;
+  width: 250px; /* Adjust to show 1.5 cards at a time, add 1px to prevent gaps */
   margin: 0; /* Remove any default margins */
+  overflow:visible;
 }
 
 /* Responsive adjustments */
-@media (min-width: 975px) {
+@media (min-width: 0px) {
   .slider-content > * {
     width: calc(100% / 3 + 1px); /* Show 2.5 cards at a time on medium screens, add 1px to prevent gaps */
   }
 }
 
 /* Responsive adjustments */
-@media (min-width: 1200px) {
+@media (min-width: 900px) {
   .slider-content > * {
     width: calc(100% / 4 + 1px); /* Show 2.5 cards at a time on medium screens, add 1px to prevent gaps */
   }
 }
 
-@media (min-width: 1400px) {
+@media (min-width: 1200px) {
   .slider-content > * {
     width: calc(100% / 4.5 + 2px); /* Show 3.5 cards at a time on large screens, add 1px to prevent gaps */
   }

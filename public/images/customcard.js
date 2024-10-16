@@ -52,4 +52,3 @@ const CustomCard = ({ topTitle, title, backgroundImage, rating, tickerProgress, 
 };
 
 export default CustomCard;
-
