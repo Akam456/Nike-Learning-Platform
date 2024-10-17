@@ -3,7 +3,7 @@
 import React, { useRef, useState } from 'react';
 import GradientButton from './GradientButton'; // Import your GradientButton component
 
-const CategoryScroll = ({ skillCategories }) => {
+const CategoryScroll = ({ skillCategories, selectedCategory, setSelectedCategory }) => {
   const containerRef = useRef(null);
 
   // Function to scroll the grid left and right
@@ -19,7 +19,6 @@ const CategoryScroll = ({ skillCategories }) => {
     }
   };
 
-  const [selectedCategory, setSelectedCategory] = useState(null);
 
   return (
     <div className="p-0 mx-5 mt-8">

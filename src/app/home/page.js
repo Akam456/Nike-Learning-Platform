@@ -55,7 +55,8 @@ export default function Home() {
     <div className="flex-grow flex flex-col overflow-hidden">
       <div className="bg-white bg-cover bg-center bg-no-repeat text-black py-8 " style={{ backgroundImage: "url('/images/bg.png')",
       backgroundPosition: "top", // Adjust to show the middle part
-      backgroundSize: "cover" }}>
+      backgroundSize: "cover", 
+      height: "100vh" }}>
         {/* Main Container */}
           {/* First Section - Continue where you left off */}
           <h1 className="text-[2.2rem] font-sans font-[690] pl-8 pb-3">Continue where you left off</h1>

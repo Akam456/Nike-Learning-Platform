@@ -1,4 +1,6 @@
-import React from 'react';
+'use client'
+import React, { useRef, useState } from 'react';
+
 import Link from 'next/link';
 import SkillCard from './components/SkillCard';
 import WhiteBox from './components/WhiteBox';
@@ -44,6 +46,7 @@ export default function SkillExchangePage() {
     { name: 'John', skill: 'Pivot Tables', image: 'skills_images/john_photo.png' },
   ];
 
+  const [selectedCategory, setSelectedCategory] = useState(null);
 
   return (
 
@@ -79,7 +82,7 @@ export default function SkillExchangePage() {
           </div>
         </header>
 
-        <main className="flex flex-col w-full max-w-7xl mx-auto">
+        <main className="flex flex-col w-full max-w-7xl mx-auto" style={{justifyContent: "space-between", height: "100%"}}>
           <div className="flex flex-col md:flex-row mb-8">
             {/* Left column */}
             <div className="md:w-5/12 pl-0 mt-24 md:ml-10">
@@ -115,8 +118,8 @@ export default function SkillExchangePage() {
       {/* Explore Popular Skills section */}
       <WhiteBox>
         <h3 className="text-4xl font-bold mb-5 mx-5 mt-6">Explore Popular Skills</h3> {/* Added consistent margin */}
-        <CategoryScroll skillCategories={skillCategories}/> {/* Added consistent margin */}
-        <SkillScroll skills={profileData}/> {/* Added consistent margin */}
+        <CategoryScroll skillCategories={skillCategories} selectedCategory={selectedCategory} setSelectedCategory={setSelectedCategory}/> {/* Added consistent margin */}
+        <SkillScroll skills={selectedCategory == skillCategories[0] ? profileData : []}/> {/* Added consistent margin */}
       </WhiteBox>
 
     </main>

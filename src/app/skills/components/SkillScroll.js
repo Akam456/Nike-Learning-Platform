@@ -33,15 +33,15 @@ const ProfileScroll = ({ skills }) => {
         ))}
       </div>
 
-      {/* Buttons to scroll */}
-      <div className="flex justify-end mt-4">
+      {/* Buttons to scroll, hacky solution for pres*/}
+      {skills.length > 0 ? (<div className="flex justify-end mt-4">
         <button className="p-2" onClick={scrollLeft}>
           <FaArrowLeft />
         </button>
         <button className="p-2" onClick={scrollRight}>
           <FaArrowRight />
         </button>
-      </div>
+      </div>) : ""}
     </div>
   );
 };
