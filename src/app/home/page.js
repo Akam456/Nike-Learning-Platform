@@ -21,6 +21,7 @@ export default function Home() {
   const digitalLiteracySkills = [
     { title: "Data Management", backgroundImage: '/images/DataManagement.jpg', rating: 4.8, topTitle: 'Digital Literacy' },
     { title: "AI & Machine Learning", backgroundImage: '/images/AIML.jpg', rating: 4.6, topTitle: 'Digital Literacy' },
+    { title: "Analytics", backgroundImage: '/images/Analytics.jpg', rating: 4.4, topTitle: 'Analytics' },
     { title: "Product Lifecycle Management", backgroundImage: '/images/CircularProductLifecyleManagement.jpg', rating: 4.4, topTitle: 'Digital Literacy' },
     { title: "Continuous Improvement", backgroundImage: '/images/ContinuousImprovementPractices.jpg', rating: 4.7, topTitle: 'Digital Literacy' },
     { title: "Supplier Relationship", backgroundImage: '/images/SupplierRelationshipManagment.jpg', rating: 4.2, topTitle: 'Digital Literacy' },
@@ -79,12 +80,12 @@ export default function Home() {
             <div className="slider-content py-1">
               {digitalLiteracySkills.map((item, index) => (
                 <NoTickerCard
-                  key={index}
-                  title={item.title}
-                  backgroundImage={item.backgroundImage}
-                  rating={item.rating}
-                  onClick={() => openPopUp(item)}
-                />
+                key={index}
+                title={item.title}
+                backgroundImage={item.backgroundImage}
+                rating={item.rating}
+                onClick={() => openPopUp(item)}
+              />
               ))}
             </div>
           </div>
