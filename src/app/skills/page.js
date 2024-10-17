@@ -14,19 +14,29 @@ const IconPlaceholder = ({ children }) => (
 );
 export default function SkillExchangePage() {
   const profileData = [
-    { name: 'Anna', skill: 'Predicting Trends Using SQL', profilePicture: "skills_images/Anna_profile.png", backgroundImage: 'skills_images/sql_background.png'},
-    { name: 'Ben', skill: 'Data Visualizations in Excel', profilePicture: "skills_images/Ben_profile.png", backgroundImage: 'skills_images/excel_background.png'},
-    { name: 'Amelia', skill: 'Large Language Models', profilePicture: "skills_images/Amelia_profile.png", backgroundImage: 'skills_images/wires_background.png'},
-    { name: 'Olivia', skill: 'Simulating External Events', profilePicture: "skills_images/Olivia_profile.png", backgroundImage: 'skills_images/nike_background.png'},
-    { name: 'James', skill: 'Collecting Large Datasets', profilePicture: "skills_images/James_profile.png", backgroundImage: 'skills_images/shoes_background.png'},
+    { name: 'Anna', skill: 'Attend a forecasting workshop', profilePicture: "skills_images/Anna_profile.png", backgroundImage: 'skills_images/sql_background.png'},
+    { name: 'Ben', skill: 'Build a 90 day product forecast', profilePicture: "skills_images/Ben_profile.png", backgroundImage: 'skills_images/excel_background.png'},
+    { name: 'Amelia', skill: 'Run a Monte Carlo simulation', profilePicture: "skills_images/Amelia_profile.png", backgroundImage: 'skills_images/wires_background.png'},
+    { name: 'Olivia', skill: 'Brief a forecast output to your team', profilePicture: "skills_images/Olivia_profile.png", backgroundImage: 'skills_images/nike_background.png'},
   ];
   
   const skillCategories = [
-    "Data Analysis",
-    "Management",
-    "Operations",
-    "Strategy",
-    "Business Acumen",
+    "Forecasting Techniques",
+    "Financial Acumen",
+    "Human Centered Design",
+    "Adaptability",
+    "Systems Thinking",
+    "Influence",
+    "Data Management",
+    "Analytics",
+    "Artificial Intelligence and Machine Learning",
+    "Simulation",
+    "Forecasting techniques",
+    "Supplier Relationship Management",
+    "Continuous Improvement",
+    "Inventory Flow Management",
+    "Customer Service",
+    "Circular Product Lifecycle Management",
   ];
   const skillExchangeHistory = [
     { name: 'Katie', skill: 'Tableau Visualizations', image: 'skills_images/katie_photo.png' },
