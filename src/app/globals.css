@@ -45,35 +45,34 @@ body {
 
 /* Slider content styles */
 .slider-content {
-  display:flex;
-  overflow:visible;
+  display: flex;
+  overflow: visible;
 }
 
 /* Slider item styles (replaced with jasons)*/
 .slider-content > * {
   flex: 0 0;
   scroll-snap-align: none;
-  width: 250px; /* Adjust to show 1.5 cards at a time, add 1px to prevent gaps */
-  margin: 0; /* Remove any default margins */
-  overflow:visible;
+  width: 250px; /* Fixed width for each item */
+  margin: 0; /* No margins, the gap handles spacing */
+  overflow: visible;
 }
 
 /* Responsive adjustments */
 @media (min-width: 0px) {
   .slider-content > * {
-    width: calc(100% / 3 + 1px); /* Show 2.5 cards at a time on medium screens, add 1px to prevent gaps */
+    width: 280px; /* Slightly larger item width on larger screens */
   }
 }
 
-/* Responsive adjustments */
 @media (min-width: 900px) {
   .slider-content > * {
-    width: calc(100% / 4 + 1px); /* Show 2.5 cards at a time on medium screens, add 1px to prevent gaps */
+    width: 300px; /* Larger item width on wider screens */
   }
 }
 
 @media (min-width: 1200px) {
   .slider-content > * {
-    width: calc(100% / 4.5 + 2px); /* Show 3.5 cards at a time on large screens, add 1px to prevent gaps */
+    width: 320px; /* Even larger item width on wider screens */
   }
 }

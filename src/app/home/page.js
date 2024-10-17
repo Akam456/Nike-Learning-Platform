@@ -47,12 +47,12 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen flex flex-grow">
+    <div className="flex flex-grow">
     <div>
       <SideBar/>
     </div>
-    <div className="flex-grow flex flex-col">
-      <div className="min-h-screen bg-white bg-cover bg-center bg-no-repeat text-black py-8 " style={{ backgroundImage: "url('/images/bg.png')",
+    <div className="flex-grow flex flex-col overflow-hidden">
+      <div className="bg-white bg-cover bg-center bg-no-repeat text-black py-8 " style={{ backgroundImage: "url('/images/bg.png')",
       backgroundPosition: "top", // Adjust to show the middle part
       backgroundSize: "cover" }}>
         {/* Main Container */}
