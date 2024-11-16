@@ -7,6 +7,7 @@ import PopUp from "./components/popup";
 import React, { useState} from 'react';
 
 import SideBar from '../components/SideBar';
+import Header from "../components/Header";
 
 export default function Home() {
   // Data for the first grid with ticker
@@ -52,8 +53,9 @@ export default function Home() {
       backgroundPosition: "top", // Adjust to show the middle part>
       backgroundSize: "cover", 
       height: "100vh" }}>
-        <SideBar />
-    <div className="pl-32 pt-8 flex-grow flex flex-col overflow-hidden">
+    <SideBar />
+    <div className="pt-8 pl-32 flex-grow flex flex-col overflow-hidden">
+      <Header Title="Courses" />
       <div>
         {/* Main Container */}
           {/* First Section - Continue where you left off */}

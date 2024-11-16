@@ -16,12 +16,14 @@ const Sidebar = () => {
     >
       {/* Logo Section */}
       <div className="flex items-center justify-center h-20 border-b border-gray-700">
-        <Image
-          src="/sidebar_images/logo.svg" // Replace with your logo's path
-          alt="Logo"
-          width={40}
-          height={40}
-        />
+        <Link href="/">
+          <Image
+            src="/sidebar_images/logo.svg" // Replace with your logo's path
+            alt="Logo"
+            width={40}
+            height={40}
+          />
+        </Link>
       </div>
 
       {/* Navigation Links */}
