@@ -17,7 +17,7 @@ const Sidebar = () => {
       {/* Logo Section */}
       <div className="flex items-center justify-center h-20 border-b border-gray-700">
         <Image
-          src="/logo.png" // Replace with your logo's path
+          src="/sidebar_images/logo.svg" // Replace with your logo's path
           alt="Logo"
           width={40}
           height={40}
@@ -28,9 +28,9 @@ const Sidebar = () => {
       <nav className="flex-grow mt-4 flex flex-col items-center justify-between">
         <ul className="flex flex-col space-y-6">
           <li>
-            <Link href="/" className="hover:bg-gray-700 rounded p-2 flex items-center justify-center">
+            <Link href="/home" className="hover:bg-gray-700 rounded p-2 flex items-center justify-center">
               <Image
-                src="/home.svg" // Replace with your home icon path
+                src="/sidebar_images/home.svg" // Replace with your home icon path
                 alt="Home Icon"
                 width={20}
                 height={20}
@@ -38,9 +38,9 @@ const Sidebar = () => {
             </Link>
           </li>
           <li>
-            <Link href="/courses" className="hover:bg-gray-700 rounded p-2 flex items-center justify-center">
+            <Link href="../skills" className="hover:bg-gray-700 rounded p-2 flex items-center justify-center">
               <Image
-                src="/courses.svg" // Replace with your courses icon path
+                src="/sidebar_images/courses.svg" // Replace with your courses icon path
                 alt="Courses Icon"
                 width={20}
                 height={20}
@@ -50,7 +50,7 @@ const Sidebar = () => {
           <li>
             <Link href="/transactions" className="hover:bg-gray-700 rounded p-2 flex items-center justify-center">
               <Image
-                src="/transactions.svg" // Replace with your transactions icon path
+                src="/sidebar_images/transactions.svg" // Replace with your transactions icon path
                 alt="Transactions Icon"
                 width={20}
                 height={20}
@@ -60,7 +60,7 @@ const Sidebar = () => {
           <li>
             <Link href="/analytics" className="hover:bg-gray-700 rounded p-2 flex items-center justify-center">
               <Image
-                src="/analytics.svg" // Replace with your analytics icon path
+                src="/sidebar_images/analytics.svg" // Replace with your analytics icon path
                 alt="Analytics Icon"
                 width={20}
                 height={20}
