@@ -9,24 +9,30 @@ const Header = ({Title}) => {
     <div className='flex justify-between'>
         <h1 className="text-[1.7rem] font-bold text-red-500 mt-4">{Title}</h1>
         <div className='flex gap-x-5 mr-5'>
-            <Image
-                src="/header_images/star.svg"
-                alt="star"
-                width={27}
-                height={27}
-            />
-            <Image
-                src="/header_images/notifications.svg"
-                alt="notify"
-                width={27}
-                height={27}
-            />
-            <Image
-                src="/header_images/profile.svg"
-                alt="profile"
-                width={27}
-                height={27}
-            />
+            <Link href="/">
+                <Image
+                    src="/header_images/star.svg"
+                    alt="star"
+                    width={27}
+                    height={27}
+                />
+            </Link>
+            <Link href="/">
+                <Image
+                    src="/header_images/notifications.svg"
+                    alt="notify"
+                    width={27}
+                    height={27}
+                />
+            </Link>
+            <Link href="/">
+                <Image
+                    src="/header_images/profile.svg"
+                    alt="profile"
+                    width={27}
+                    height={27}
+                />
+            </Link>
         </div>
     </div>
   );
