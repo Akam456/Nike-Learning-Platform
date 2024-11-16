@@ -48,19 +48,17 @@ export default function Home() {
   };
 
   return (
-    <div className="flex flex-grow">
-    <div>
-      <SideBar/>
-    </div>
-    <div className="flex-grow flex flex-col overflow-hidden">
-      <div className="bg-white bg-cover bg-center bg-no-repeat text-black py-8 " style={{ backgroundImage: "url('/images/bg.png')",
-      backgroundPosition: "top", // Adjust to show the middle part
+    <div className="flex flex-grow bg-white bg-cover bg-center bg-no-repeat text-black" style={{ backgroundImage: "url('/images/bg.png')",
+      backgroundPosition: "top", // Adjust to show the middle part>
       backgroundSize: "cover", 
       height: "100vh" }}>
+        <SideBar />
+    <div className="pl-32 pt-8 flex-grow flex flex-col overflow-hidden">
+      <div>
         {/* Main Container */}
           {/* First Section - Continue where you left off */}
-          <h1 className="text-[2.2rem] font-sans font-[690] pl-8 pb-3">Continue where you left off</h1>
-          <div className="pl-[2rem] flex flex-wrap justify-start">
+          <h1 className="text-[2.2rem] font-sans font-[690] pb-3">Continue where you left off</h1>
+          <div className="flex flex-wrap justify-start">
             {continueWhereLeftOff.map((item, index) => (
               <CustomCard
                 key={index}
@@ -76,8 +74,8 @@ export default function Home() {
           
 
           {/* Second Section - Digital Literacy Skills (Slider) */}
-          <h2 className="pl-[2rem] font-sans text-[1.8rem] font-[690] pt-11 pb-2">Digital Literacy Skills</h2>
-          <div className="pl-[2rem] slider-container">
+          <h2 className="font-sans text-[1.8rem] font-[690] pt-11 pb-2">Digital Literacy Skills</h2>
+          <div className="slider-container">
             <div className="slider-content py-1">
               {digitalLiteracySkills.map((item, index) => (
                 <NoTickerCard
@@ -92,8 +90,8 @@ export default function Home() {
           </div>
 
           {/* Third Section - Business Acumen: Influence (Slider) */}
-          <h2 className="pl-[2rem] font-sans text-[1.8rem] font-[690] pb-2 pt-6">Because you started Business Acumen: Influence</h2>
-          <div className="pl-[2rem] slider-container">
+          <h2 className="font-sans text-[1.8rem] font-[690] pb-2 pt-6">Because you started Business Acumen: Influence</h2>
+          <div className="slider-container">
             <div className="slider-content py-1">
               {businessAcumenInfluence.map((item, index) => (
                 <NoTickerCard

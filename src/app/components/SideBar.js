@@ -1,47 +1,74 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { HomeIcon, BookOpenIcon, ArrowsRightLeftIcon, ChartBarIcon } from '@heroicons/react/24/outline';
 
 const Sidebar = () => {
   return (
-    <div className="h-screen w-64 bg-black text-white flex flex-col justify-between">
-      <div className="space-y-6">
-        <div className="flex items-center justify-center h-16">
-          <Image src="/images/nike-logo.png" alt="Nike Logo" className="h-8" width={80} height={80}/>
-        </div>
-
-        <nav className="space-y-1 px-4">
-          <Link href="/">
-            <div className="flex items-center space-x-2 py-2 hover:bg-gray-700 rounded-md transition">
-              <HomeIcon className="h-5 w-5" />
-              <span>Home</span>
-            </div>
-          </Link>
-          <Link href="/home">
-            <div className="flex items-center space-x-2 py-2 hover:bg-gray-700 rounded-md transition">
-              <BookOpenIcon className="h-5 w-5" />
-              <span>Courses</span>
-            </div>
-          </Link>
-          <Link href="/skills">
-            <div className="flex items-center space-x-2 py-2 hover:bg-gray-700 rounded-md transition">
-              <ArrowsRightLeftIcon className="h-5 w-5" />
-              <span>Skill Swap</span>
-            </div>
-          </Link>
-          <Link href="/progress">
-            <div className="flex items-center space-x-2 py-2 hover:bg-gray-700 rounded-md transition">
-              <ChartBarIcon className="h-5 w-5" />
-              <span>Progress</span>
-            </div>
-          </Link>
-        </nav>
+    <div
+      className="w-20 bg-black text-white fixed flex flex-col items-center rounded-2xl"
+      style={{
+        top: '20px', // Fixed space from the top
+        bottom: '20px', // Fixed space from the bottom
+        left: '20px', // Fixed space from the left
+        width: '80px', // Sidebar width
+        height: 'calc(100vh - 40px)', // Dynamically calculate height (total height - top and bottom spacing)
+      }}
+    >
+      {/* Logo Section */}
+      <div className="flex items-center justify-center h-20 border-b border-gray-700">
+        <Image
+          src="/logo.png" // Replace with your logo's path
+          alt="Logo"
+          width={40}
+          height={40}
+        />
       </div>
 
-      <div className="px-4 py-4">
-        <p className="text-xs text-gray-400">© 2024 Nike</p>
-      </div>
+      {/* Navigation Links */}
+      <nav className="flex-grow mt-4 flex flex-col items-center justify-between">
+        <ul className="flex flex-col space-y-6">
+          <li>
+            <Link href="/" className="hover:bg-gray-700 rounded p-2 flex items-center justify-center">
+              <Image
+                src="/home.svg" // Replace with your home icon path
+                alt="Home Icon"
+                width={20}
+                height={20}
+              />
+            </Link>
+          </li>
+          <li>
+            <Link href="/courses" className="hover:bg-gray-700 rounded p-2 flex items-center justify-center">
+              <Image
+                src="/courses.svg" // Replace with your courses icon path
+                alt="Courses Icon"
+                width={20}
+                height={20}
+              />
+            </Link>
+          </li>
+          <li>
+            <Link href="/transactions" className="hover:bg-gray-700 rounded p-2 flex items-center justify-center">
+              <Image
+                src="/transactions.svg" // Replace with your transactions icon path
+                alt="Transactions Icon"
+                width={20}
+                height={20}
+              />
+            </Link>
+          </li>
+          <li>
+            <Link href="/analytics" className="hover:bg-gray-700 rounded p-2 flex items-center justify-center">
+              <Image
+                src="/analytics.svg" // Replace with your analytics icon path
+                alt="Analytics Icon"
+                width={20}
+                height={20}
+              />
+            </Link>
+          </li>
+        </ul>
+      </nav>
     </div>
   );
 };

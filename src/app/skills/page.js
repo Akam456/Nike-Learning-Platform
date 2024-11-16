@@ -50,11 +50,11 @@ export default function SkillExchangePage() {
 
   return (
 
-    <div className="bg-white font-sans text-gray-800 min-h-screen flex flex-grow">
+    <div className="bg-white font-sans text-gray-800 min-h-screen flex">
       <div className="rounded-full shadow-lg">
       <SideBar/>
       </div>
-      <div className="flex-grow flex flex-col">
+      <div className="pl-24 flex-grow flex flex-col">
         <header className="flex justify-between items-center mb-8">
           <div className="flex items-center">
             <h1 className="text-2xl font-bold text-red-500 ml-6 mt-4">Skill Exchange</h1>
