@@ -27,7 +27,7 @@ export default function Leaderboard() {
             <span className="text-lg text-black font-bold">1</span>
             <div className="flex items-center space-x-3">
               <img
-                src="/path/to/thomas.jpg"
+                src="/dashboard_images/thomas.png"
                 alt="Thomas"
                 className="w-8 h-8 rounded-full border border-orange-500"
               />
@@ -44,7 +44,7 @@ export default function Leaderboard() {
             <span className="text-lg text-black font-bold">2</span>
             <div className="flex items-center space-x-3">
               <img
-                src="/path/to/jenn.jpg"
+                src="/dashboard_images/jenn.png"
                 alt="Jenn"
                 className="w-8 h-8 rounded-full border border-orange-500"
               />
@@ -61,7 +61,7 @@ export default function Leaderboard() {
             <span className="text-lg text-black font-bold">3</span>
             <div className="flex items-center space-x-3">
               <img
-                src="/path/to/amelia.jpg"
+                src="/dashboard_images/amelia.png"
                 alt="Amelia"
                 className="w-8 h-8 rounded-full border border-orange-500"
               />
@@ -83,11 +83,12 @@ export default function Leaderboard() {
             <div className="flex flex-grow items-center justify-between rounded-br-xl bg-[#ffe9e3] px-6 py-4">
               {/* Avatar and Name */}
               <div className="flex items-center space-x-3">
-                <div className="flex items-center justify-center w-10 h-10 rounded-full border border-[#f17b50]">
+                <div className="flex items-center justify-center w-10 h-10 rounded-full">
                   <img
-                    src="/path/to/profile.svg"
+                    src="/header_images/profile.svg"
                     alt="You"
-                    className="w-6 h-6 object-contain"
+                    width="35"
+                    height="35"
                   />
                 </div>
                 <div>

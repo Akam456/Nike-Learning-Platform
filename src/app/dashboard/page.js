@@ -1,3 +1,4 @@
+"use client"
 import Hero from './components/Header';
 import ProgressSection from './components/ProgressSection.js';
 import SkillExchange from './components/SkillExchange';

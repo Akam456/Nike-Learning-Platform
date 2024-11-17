@@ -28,7 +28,7 @@ export default function Achievements() {
       <div className="space-y-4 mt-4">
         <div className="flex items-center space-x-3 border border-pink-300 rounded-lg p-2">
           <img
-            src="/profile_images/PinkD.svg"
+            src="/dashboard_images/pink_diamond.png"
             alt="Completed 10 Courses"
             className="w-8 h-8 object-contain"
           />
@@ -36,7 +36,7 @@ export default function Achievements() {
         </div>
         <div className="flex items-center space-x-3 border border-yellow-300 rounded-lg p-2">
           <img
-            src="/profile_images/OrangeD.svg"
+            src="/dashboard_images/yellow_diamond.png"
             alt="Digital Literacy Mastery Badge"
             className="w-8 h-8 object-contain"
           />
@@ -44,7 +44,7 @@ export default function Achievements() {
         </div>
         <div className="flex items-center space-x-3 border border-orange-300 rounded-lg p-2">
           <img
-            src="/profile_images/RedD.svg"
+            src="/dashboard_images/red_diamond.png"
             alt="Completed 10 Skill Exchanges"
             className="w-8 h-8 object-contain"
           />
