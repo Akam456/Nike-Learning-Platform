@@ -2,6 +2,7 @@
 import React, { useRef } from 'react';
 import SkillCard from './SkillCard';
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
+import Link from 'next/link';
 
 
 
