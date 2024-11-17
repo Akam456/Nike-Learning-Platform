@@ -49,12 +49,12 @@ export default function Home() {
   };
 
   return (
-    <div className="flex flex-grow bg-white bg-cover bg-center bg-no-repeat text-black" style={{ backgroundImage: "url('/images/bg.png')",
+    <div className="flex bg-white bg-cover bg-center p-8 bg-no-repeat text-black" style={{ backgroundImage: "url('/images/bg.png')",
       backgroundPosition: "top", // Adjust to show the middle part>
       backgroundSize: "cover", 
       height: "100vh" }}>
     <SideBar />
-    <div className="pt-8 pl-32 flex-grow flex flex-col overflow-hidden">
+    <div className="pl-32 flex-grow flex flex-col overflow-hidden">
       <Header Title="Courses" />
       <div>
         {/* Main Container */}

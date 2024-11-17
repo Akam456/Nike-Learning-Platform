@@ -1,9 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-const IconPlaceholder = ({ children }) => (
-    <span className="inline-block w-6 h-6 text-center">{children}</span>
-  );
+
 const Header = ({Title}) => {
   return (
     <div className='flex justify-between'>

@@ -53,7 +53,7 @@ export default function SkillExchangePage() {
 
     <div className="bg-white font-sans text-gray-800 min-h-screen flex">
       <SideBar/>
-      <div className="pl-32 pt-8 flex-grow flex flex-col">
+      <div className="pl-32 p-8 flex-grow flex flex-col">
         <Header Title="Skill Exchange"/>
 
         <main className="flex flex-col w-full max-w-7xl mx-auto" style={{justifyContent: "space-between", height: "100%"}}>
