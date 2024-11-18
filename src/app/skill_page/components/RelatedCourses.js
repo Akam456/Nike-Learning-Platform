@@ -8,10 +8,10 @@ const RelatedCourses = () => {
   const [isExpanded, setIsExpanded] = useState(true);
 
   const skills = [
-    { name: 'Anna', skill: 'Attend a forecasting workshop', profilePicture: "/skills_images/Anna_profile.png", backgroundImage: 'skills_images/sql_background.png'},
-    { name: 'Ben', skill: 'Build a 90 day product forecast', profilePicture: "/skills_images/Ben_profile.png", backgroundImage: 'skills_images/excel_background.png'},
-    { name: 'Amelia', skill: 'Run a Monte Carlo simulation', profilePicture: "/skills_images/Amelia_profile.png", backgroundImage: 'skills_images/wires_background.png'},
-    { name: 'Olivia', skill: 'Brief a forecast output to your team', profilePicture: "/skills_images/Olivia_profile.png", backgroundImage: 'skills_images/nike_background.png'}
+    { name: 'Anna', skill: 'Data Extraction and Querying', profilePicture: "/skills_images/Anna_profile.png", backgroundImage: 'skills_images/sql_background.png'},
+    { name: 'Ben', skill: 'Data Cleaning & Transformation', profilePicture: "/skills_images/Ben_profile.png", backgroundImage: 'skills_images/excel_background.png'},
+    { name: 'Amelia', skill: 'Analytical Functions and Aggregations', profilePicture: "/skills_images/Amelia_profile.png", backgroundImage: 'skills_images/wires_background.png'},
+    { name: 'Olivia', skill: 'Time Series Analysis', profilePicture: "/skills_images/Olivia_profile.png", backgroundImage: 'skills_images/nike_background.png'}
   ];
 
   return (

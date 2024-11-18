@@ -51,10 +51,6 @@ const SkillCard = ({ name, skill, profilePicture, backgroundImage }) => {
             </div>
             <div className="ml-4 text-white mt-2">
               <p className="text-[1rem] font-helvetica-neue mb-0 leading-none">{name}</p>
-              {/* Follow Button */}
-              <button className="mt-[0rem] bg-gradient-to-r from-orange-400 to-pink-500 text-white px-1 py-0 rounded-sm text-[0.5rem] font-bold font-helvetica-neue">
-                + Follow
-              </button>
             </div>
           </div>
 

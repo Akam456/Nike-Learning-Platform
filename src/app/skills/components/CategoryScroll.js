@@ -21,20 +21,27 @@ const CategoryScroll = ({ skillCategories, selectedCategory, setSelectedCategory
 
 
   return (
-    <div className="p-0 mx-5 mt-8">
+    <div className="mx-5 mt-8">
       {/* Grid with horizontal scrolling */}
       <div
         ref={containerRef}
-        className="grid grid-flow-col auto-cols-max gap-6 h-full overflow-x-auto"
+        className="grid grid-flow-col auto-cols-max gap-6 h-full overflow-x-auto rounded-md bg-gray-100 p-2 scroll-smooth"
+        style={{
+          scrollPadding: "1rem",
+        }}
       >
         {skillCategories.map((category, index) => (
-          <GradientButton 
-          key={index} label={category} 
-          isActive={selectedCategory === category} 
-          onClick={() => setSelectedCategory(category)} />
+          <GradientButton
+            key={index}
+            label={category}
+            isActive={selectedCategory === category}
+            onClick={() => setSelectedCategory(category)}
+            className="min-w-[10rem] max-w-[12rem]" // Ensure consistent button width
+          />
         ))}
       </div>
     </div>
+
   );
 };
 
