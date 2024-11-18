@@ -58,7 +58,7 @@ const PopUpSkills = ({ closePopUp }) => {
               <img
                 src="/skill_page_images/extra_info.png"
                 alt="Extra Info"
-                className="w-[32rem] h-auto"
+                className="w-[26rem] h-auto"
               />
             </div>
             <div className="text-lg text-black leading-[30px] font-helveticaNeue text-[22px] mt-6">
